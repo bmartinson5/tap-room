@@ -47,7 +47,8 @@ export default class Keg extends Component {
           <button onClick={this.handleSell}>Sell</button><br/><br/>
           <p>Change Price</p>
           <button >Increase (+$0.50)</button>
-          <button >Decrease (-$0.50)</button>
+          <button >Decrease (-$0.50)</button><br/><br/><br/>
+          <button onClick={this.props.showKegs}>Return to Kegs list</button>
         </div>
       </div>
     );

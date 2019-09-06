@@ -64,6 +64,12 @@ export default class KegList extends Component {
     })
   }
 
+  showKegs = () => {
+    this.setState({
+      kegPage: false
+    })
+  }
+
   changeVolume = (sellNumber, kegNumber) => {
     const newKegList = this.state.kegList
     newKegList[kegNumber].volume -= sellNumber * 5;
@@ -79,7 +85,12 @@ export default class KegList extends Component {
     const {kegList, kegPage, currentKeg} = this.state;
     if(kegPage){
       return (
-        <KegPage info={kegList[currentKeg]} kegNumber={currentKeg} changeVolume={this.changeVolume} />
+        <KegPage
+            info={kegList[currentKeg]}
+            kegNumber={currentKeg}
+            changeVolume={this.changeVolume}
+            showKegs={this.showKegs}
+          />
       )
     }
 
