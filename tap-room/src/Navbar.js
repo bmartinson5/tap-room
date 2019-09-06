@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 import './css/Navbar.css';
 
 class Navbar extends Component {
@@ -14,7 +15,7 @@ class Navbar extends Component {
             Tap Room
           </div>
           <div className="navbar-item">
-            Add Keg
+            <Link to="/addKeg">Add Keg</Link>
           </div>
           <div className="navbar-item">
             Filter Kegs

@@ -8,13 +8,15 @@ import './css/App.css';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <BrowserRouter>
+    <BrowserRouter>
+      <div>
+        <Navbar />
         <Switch>
-          <Route path='/' component={KegList} />
-          <Route path='/addKeg' component={AddKeg} />
+          <Route exact path='/' component={KegList} />
+          <Route exact path='/addKeg' component={AddKeg} />
         </Switch>
-      </BrowserRouter>
+      </div>
+    </BrowserRouter>
     </div>
   );
 }

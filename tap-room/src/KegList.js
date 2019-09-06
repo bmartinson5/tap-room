@@ -70,11 +70,20 @@ export default class KegList extends Component {
     })
   }
 
+  changePrice = (amount, kegNumber) => {
+    console.log('here');
+    const newKegList = this.state.kegList
+    newKegList[kegNumber].price += amount;
+    if(newKegList[kegNumber].price < 0) newKegList[kegNumber].volume = 0
+    this.setState({
+      kegList: newKegList
+    })
+  }
+
   changeVolume = (sellNumber, kegNumber) => {
     const newKegList = this.state.kegList
     newKegList[kegNumber].volume -= sellNumber * 5;
     if(newKegList[kegNumber].volume < 0) newKegList[kegNumber].volume = 0
-    console.log(newKegList[kegNumber].volume);
     this.setState({
       kegList: newKegList
     })
@@ -90,6 +99,7 @@ export default class KegList extends Component {
             kegNumber={currentKeg}
             changeVolume={this.changeVolume}
             showKegs={this.showKegs}
+            changePrice={this.changePrice}
           />
       )
     }
