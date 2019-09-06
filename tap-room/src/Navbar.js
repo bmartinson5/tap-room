@@ -9,7 +9,15 @@ class Navbar extends Component {
   render(){
     return (
       <div className="navbar">
-        <h1>Tap Room</h1>
+        <div className="navbar-items">
+          <div className="logo">
+            Tap Room
+          </div>
+          <div className="navbar-item">
+            Add Keg
+          </div>
+        </div>
+
       </div>
     );
   }
