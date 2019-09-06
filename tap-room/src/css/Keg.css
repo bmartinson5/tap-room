@@ -8,6 +8,19 @@
 
 .keg-list-item {
   width: 400px;
+  height: 400px;
   margin: 30px;
   display: inline-block;
+  position: relative;
+}
+
+.beer-info {
+  height: 45%;
+  width: 45%;
+  margin: auto;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

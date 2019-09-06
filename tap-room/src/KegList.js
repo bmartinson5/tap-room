@@ -51,7 +51,8 @@ export default class KegList extends Component {
 
   render(){
     return (
-      <div className="keg-list">
+      <div className="keg-list" >
+
         {this.kegList.map((keg, index) => (
             <Keg info={keg} kegNumber={index+1}/>
         ))}
