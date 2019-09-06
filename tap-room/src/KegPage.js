@@ -5,8 +5,20 @@ import './css/Keg.css';
 export default class Keg extends Component {
   constructor(props){
     super(props)
+
+    this.state = {
+      sellNumber: 0
+    }
   }
 
+  handleChange = (e) => {
+    this.setState({ sellNumber: e.target.value })
+  }
+
+  handleSell = () => {
+    this.props.changeVolume(this.state.sellNumber, this.props.kegNumber)
+    this.setState({ sellNumber: 0})
+  }
 
   render(){
     const { info, kegNumber } = this.props
@@ -31,8 +43,8 @@ export default class Keg extends Component {
       </div>
         <div className="edit-info">
           <p>Sell Pint(s) (enter #)</p>
-          <input onChange={this.handleChange}/>
-          <button >Sell</button><br/><br/>
+          <input type="number" value={this.state.sellNumber} onChange={this.handleChange}/>
+          <button onClick={this.handleSell}>Sell</button><br/><br/>
           <p>Change Price</p>
           <button >Increase (+$0.50)</button>
           <button >Decrease (-$0.50)</button>
