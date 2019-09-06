@@ -11,7 +11,8 @@ export default class Keg extends Component {
   render(){
     const { info, kegNumber } = this.props
     return (
-      <div className="kegpage-container"
+      <div>
+      <div className="keg-container"
         style={{
           background: "url(" + KegPic + ")",
           backgroundPosition: "center",
@@ -26,6 +27,15 @@ export default class Keg extends Component {
           IBU: {info.ibu} <br/><br/>
           ABV: {info.abv}% <br/><br/>
           Price: ${info.price}
+        </div>
+      </div>
+        <div className="edit-info">
+          <p>Sell Pint(s) (enter #)</p>
+          <input onChange={this.handleChange}/>
+          <button >Sell</button><br/><br/>
+          <p>Change Price</p>
+          <button >Increase (+$0.50)</button>
+          <button >Decrease (-$0.50)</button>
         </div>
       </div>
     );

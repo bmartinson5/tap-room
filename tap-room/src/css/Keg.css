@@ -31,18 +31,30 @@
   background-color: #CCB868;
 }
 
-.kegpage-container {
+.keg-container {
   width: 600px;
   height: 600px;
   position: absolute;
-  left: 50%;
+  left: 63%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
+.edit-info {
+  position: absolute;
+  left: 33%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
 .kegpage-info {
+  text-align: center;
   background-color: #F2F2F2;
   position: absolute;
+  font-size: 20px;
+  padding: 20px;
+  width: 40%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
