@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Keg from './Keg.js'
+import KegPage from './KegPage.js'
 import './css/Keg.css';
 
 export default class KegList extends Component {
@@ -47,14 +48,34 @@ export default class KegList extends Component {
         price: 4.00
       }
     ]
+
+    this.state = {
+      kegList: this.kegList,
+      kegPage: false,
+      currentKeg: 0
+    }
+  }
+
+  handleClick = (kegNumber) => {
+    this.setState({
+      kegPage: true,
+      currentKeg: kegNumber
+    })
   }
 
   render(){
+    const {kegList, kegPage, currentKeg} = this.state;
+    if(kegPage){
+      return (
+        <KegPage info={kegList[currentKeg]} />
+      )
+    }
+
     return (
       <div className="keg-list" >
 
-        {this.kegList.map((keg, index) => (
-            <Keg info={keg} kegNumber={index+1}/>
+        {kegList.map((keg, index) => (
+            <Keg key={index} info={keg} kegNumber={index+1} callback={this.handleClick}/>
         ))}
       </div>
     );
