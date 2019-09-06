@@ -8,8 +8,8 @@ class Navbar extends Component {
 
   render(){
     return (
-      <div className="App">
-        Tap Room
+      <div className="navbar">
+        <h1>Tap Room</h1>
       </div>
     );
   }

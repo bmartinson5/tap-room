@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Keg from './Keg.js'
-import './css/Navbar.css';
+import './css/Keg.css';
 
 export default class KegList extends Component {
   constructor(props){
@@ -51,9 +51,9 @@ export default class KegList extends Component {
 
   render(){
     return (
-      <div className="App">
+      <div className="keg-list">
         {this.kegList.map((keg, index) => (
-          <Keg info={keg} kegNumber={index+1}/>
+            <Keg info={keg} kegNumber={index+1}/>
         ))}
       </div>
     );

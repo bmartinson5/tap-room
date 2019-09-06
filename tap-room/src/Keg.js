@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './css/Navbar.css';
+import './css/Keg.css';
 
 export default class Keg extends Component {
   constructor(props){
@@ -9,10 +9,15 @@ export default class Keg extends Component {
   render(){
     const { info, kegNumber } = this.props
     return (
-      <div className="App">
+      <div className="keg-list-item">
         <h2>
-          {kegNumber} {info.name}
+          {kegNumber}. {info.name}
         </h2>
+        Brand: {info.brand}<br/>
+        Volume: {info.volume}%<br/>
+        IBU: {info.ibu} <br/>
+        ABV: {info.abv}% <br/>
+        Price: ${info.price}
       </div>
     );
   }
