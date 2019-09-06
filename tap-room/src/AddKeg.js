@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 import KegPic from './img/keg.jpg'
 import './css/Keg.css';
 
@@ -21,6 +22,7 @@ export default class AddKeg extends Component {
     return (
       <div className="add-keg-form">
        <h1>Add A Keg</h1>
+       <p>THis form doesn't work yet</p>
 
        <input type="text" name="name" onChange={this.handleChange}placeholder="name" /><br/>
        <br/>
@@ -32,7 +34,8 @@ export default class AddKeg extends Component {
        <br/>
        <input type="number" name="price" onChange={this.handleChange} placeholder="price"/><br/>
        <br/>
-       <button onClick={this.props.callback}>Add! </button>
+       <Link to="/">Add</Link><br/>
+       <Link to="/">Cancel</Link>
       </div>
     );
   }

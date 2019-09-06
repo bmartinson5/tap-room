@@ -46,8 +46,8 @@ export default class Keg extends Component {
           <input type="number" value={this.state.sellNumber} onChange={this.handleChange}/>
           <button onClick={this.handleSell}>Sell</button><br/><br/>
           <p>Change Price</p>
-          <button >Increase (+$0.50)</button>
-          <button >Decrease (-$0.50)</button><br/><br/><br/>
+          <button  onClick={() => this.props.changePrice(0.5, kegNumber)}>Increase (+$0.50)</button>
+          <button  onClick={() => this.props.changePrice(-0.5, kegNumber)}>Decrease (-$0.50)</button><br/><br/><br/>
           <button onClick={this.props.showKegs}>Return to Kegs list</button>
         </div>
       </div>

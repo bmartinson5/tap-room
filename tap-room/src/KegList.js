@@ -71,7 +71,8 @@ export default class KegList extends Component {
   }
 
   changePrice = (amount, kegNumber) => {
-    console.log('here');
+    console.log('here', amount, kegNumber);
+
     const newKegList = this.state.kegList
     newKegList[kegNumber].price += amount;
     if(newKegList[kegNumber].price < 0) newKegList[kegNumber].volume = 0

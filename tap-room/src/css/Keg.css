@@ -31,7 +31,7 @@
   background-color: #CCB868;
 }
 
-.keg-container {
+.keg-container, .add-keg-form {
   width: 600px;
   height: 600px;
   position: absolute;
