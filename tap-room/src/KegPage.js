@@ -11,15 +11,22 @@ export default class Keg extends Component {
   render(){
     const { info, kegNumber } = this.props
     return (
-      <div className="keg-info" onClick={this.handleClick}>
+      <div className="kegpage-container"
+        style={{
+          background: "url(" + KegPic + ")",
+          backgroundPosition: "center",
+        }}>
+
+        <div className="kegpage-info">
         <h2>
           {info.name}
         </h2>
-        Brand: {info.brand}<br/>
-        Volume: {info.volume}%<br/>
-        IBU: {info.ibu} <br/>
-        ABV: {info.abv}% <br/>
-        Price: ${info.price}
+          Brand: {info.brand}<br/><br/>
+          Volume: {info.volume}%<br/><br/>
+          IBU: {info.ibu} <br/><br/>
+          ABV: {info.abv}% <br/><br/>
+          Price: ${info.price}
+        </div>
       </div>
     );
   }

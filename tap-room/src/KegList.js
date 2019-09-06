@@ -57,6 +57,7 @@ export default class KegList extends Component {
   }
 
   handleClick = (kegNumber) => {
+    console.log(kegNumber, this.state.kegList[kegNumber]);
     this.setState({
       kegPage: true,
       currentKeg: kegNumber

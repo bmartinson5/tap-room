@@ -17,7 +17,7 @@ export default class Keg extends Component {
           backgroundSize: "cover",
         }}>
 
-        <div className="beer-info" onClick={e => callback(key)}>
+        <div className="beer-info" onClick={e => callback(kegNumber-1)}>
           <h2>
             {kegNumber}. {info.name}
           </h2>

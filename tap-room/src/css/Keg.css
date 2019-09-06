@@ -30,3 +30,21 @@
 .beer-info:hover {
   background-color: #CCB868;
 }
+
+.kegpage-container {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kegpage-info {
+  background-color: #F2F2F2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
