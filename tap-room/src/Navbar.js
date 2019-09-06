@@ -16,6 +16,12 @@ class Navbar extends Component {
           <div className="navbar-item">
             Add Keg
           </div>
+          <div className="navbar-item">
+            Filter Kegs
+          </div>
+          <div className="navbar-item">
+            Sign In
+          </div>
         </div>
 
       </div>

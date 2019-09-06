@@ -7,6 +7,10 @@ export default class Keg extends Component {
     super(props)
   }
 
+  handleClick = () => {
+    console.log('here');
+  }
+
   render(){
     const { info, kegNumber } = this.props
     return (
@@ -17,7 +21,7 @@ export default class Keg extends Component {
           backgroundSize: "cover",
         }}>
 
-        <div className="beer-info">
+        <div className="beer-info" onClick={this.handleClick}>
           <h2>
             {kegNumber}. {info.name}
           </h2>

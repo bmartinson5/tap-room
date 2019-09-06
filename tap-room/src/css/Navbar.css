@@ -10,6 +10,11 @@
   font-family: 'Cinzel', serif;
 }
 
+.navbar-item:hover {
+  color: #CCB868;
+
+}
+
 .navbar-item {
   display: inline-block;
   width: 20%;
