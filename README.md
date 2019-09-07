@@ -16,7 +16,7 @@ This is a react app that acts as a keg tracker for a tap room. Allows users to s
 
 # Project Structure
 
-Working on figuring out how to display a draw.io here
+![Diagram](Tap-Room-Diagram.drawio)
 
 ## Technologies Used
 
