@@ -14,7 +14,7 @@ This is a react app that acts as a keg tracker for a tap room. Allows users to s
 * To run the program, use 'npm run start'
 * The server should open a page in chrome, if not go to url: localhost:3000
 
-#Project Structure
+# Project Structure
 
 Working on figuring out how to display a draw.io here
 
