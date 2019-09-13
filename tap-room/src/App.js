@@ -74,10 +74,18 @@ class App extends React.Component{
     })
   }
 
+  addKeg = (keg) => {
+    const newKegList = this.state.kegList.slice()
+    newKegList.push(keg)
+    this.setState({
+      kegList: newKegList
+    })
+  }
+
   changePrice = (amount, kegNumber) => {
     console.log('here', amount, kegNumber);
 
-    const newKegList = this.state.kegList
+    const newKegList = this.state.kegList.slice()
     newKegList[kegNumber].price += amount;
     if(newKegList[kegNumber].price < 0) newKegList[kegNumber].price = 0
     this.setState({
@@ -103,15 +111,16 @@ class App extends React.Component{
           <Switch>
             <Route exact path='/' render={()=><KegList
                                                   kegList={this.state.kegList}
-                                                  currentKeg={this.state.currentKeg}
-                                                  kegPage={this.state.kegPage}
                                                   handleClick={this.handleKegSelect}
                                                   />} />
             <Route exact path='/Keg' render={()=><KegPage
-                                                  currentKeg={this.state.currentKeg}
+                                                  kegNumber={this.state.currentKeg}
                                                   info={this.state.kegList[this.state.currentKeg]}
-                                                  handleClick={this.handleKegSelect}
+                                                  changeVolume={this.changeVolume}
+                                                  changePrice={this.changePrice}
                                                   />} />
+            <Route exact path='/addKeg' render={()=><AddKeg addKeg={this.addKeg}/>} />
+
           </Switch>
         </div>
       </BrowserRouter>
