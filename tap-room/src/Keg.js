@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import KegPic from './img/keg.jpg'
+import {Link} from 'react-router-dom'
 import './css/Keg.css';
 
 export default class Keg extends Component {
@@ -16,7 +17,7 @@ export default class Keg extends Component {
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}>
-
+        <Link to="/Keg">
         <div className="beer-info" onClick={e => callback(kegNumber-1)}>
           <h2>
             {kegNumber}. {info.name}
@@ -27,6 +28,7 @@ export default class Keg extends Component {
           ABV: {info.abv}% <br/>
           Price: ${info.price}
         </div>
+        </Link>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar.js'
 import KegList from './KegList.js'
+import KegPage from './KegPage.js'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AddKeg from './AddKeg.js'
 import './css/App.css';
@@ -58,7 +59,8 @@ class App extends React.Component{
     }
   }
 
-  handleClick = (kegNumber) => {
+  handleKegSelect = (kegNumber) => {
+    console.log('got to click');
     console.log(kegNumber, this.state.kegList[kegNumber]);
     this.setState({
       kegPage: true,
@@ -103,9 +105,13 @@ class App extends React.Component{
                                                   kegList={this.state.kegList}
                                                   currentKeg={this.state.currentKeg}
                                                   kegPage={this.state.kegPage}
-                                                  handleClick={this.handleClick}
+                                                  handleClick={this.handleKegSelect}
                                                   />} />
-            <Route exact path='/addKeg' component={AddKeg} />
+            <Route exact path='/Keg' render={()=><KegPage
+                                                  currentKeg={this.state.currentKeg}
+                                                  info={this.state.kegList[this.state.currentKeg]}
+                                                  handleClick={this.handleKegSelect}
+                                                  />} />
           </Switch>
         </div>
       </BrowserRouter>

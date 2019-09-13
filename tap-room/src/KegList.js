@@ -10,18 +10,7 @@ export default class KegList extends Component {
 
 
   render(){
-    const {kegList, kegPage, currentKeg, handleClick} = this.props;
-    if(kegPage){
-      return (
-        <KegPage
-            info={kegList[currentKeg]}
-            kegNumber={currentKeg}
-            changeVolume={this.changeVolume}
-            showKegs={this.showKegs}
-            changePrice={this.changePrice}
-          />
-      )
-    }
+    const {kegList, handleClick} = this.props;
 
     return (
       <div className="keg-list" >

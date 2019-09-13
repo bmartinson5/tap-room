@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import KegPic from './img/keg.jpg'
+import {Link} from 'react-router-dom'
 import './css/Keg.css';
 
 export default class Keg extends Component {
@@ -48,7 +49,7 @@ export default class Keg extends Component {
           <p>Change Price</p>
           <button  onClick={() => this.props.changePrice(0.5, kegNumber)}>Increase (+$0.50)</button>
           <button  onClick={() => this.props.changePrice(-0.5, kegNumber)}>Decrease (-$0.50)</button><br/><br/><br/>
-          <button onClick={this.props.showKegs}>Return to Kegs list</button>
+          <Link to="/"> Return to Kegs list</Link>
         </div>
       </div>
     );
