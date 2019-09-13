@@ -19,16 +19,17 @@ export default class KegList extends Component {
   }
 
   filterList = (kegList) => {
-    let filteredKegList = kegList.filter(keg =>
+    let filteredKegList = kegList.slice()
+    filteredKegList = filteredKegList.filter(keg =>
       keg.name.toLowerCase().includes(this.state.byName.toLowerCase()) &&
       keg.brand.toLowerCase().includes(this.state.byBrand.toLowerCase())
     )
 
     if(this.state.byMinAbv !== ""){
-      filteredKegList = kegList.filter(keg => keg.abv >= parseFloat(this.state.byMinAbv))
+      filteredKegList = filteredKegList.filter(keg => keg.abv >= parseFloat(this.state.byMinAbv))
     }
     if(this.state.byMaxAbv !== ""){
-      filteredKegList = kegList.filter(keg => keg.abv <= parseFloat(this.state.byMaxAbv))
+      filteredKegList = filteredKegList.filter(keg => keg.abv <= parseFloat(this.state.byMaxAbv))
     }
     return filteredKegList
   }
@@ -40,7 +41,7 @@ export default class KegList extends Component {
     const filteredKegList = this.filterList(kegList)
 
     return (
-      <div>
+      <div className="filter-container">
         <div className="filter-info">
           <h2>Filter by</h2>
           Name: <input type="text" value={this.state.byName} name="byName" onChange={this.handleChange}placeholder="name" /><br/>

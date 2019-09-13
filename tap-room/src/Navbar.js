@@ -22,9 +22,6 @@ class Navbar extends Component {
           <div className="navbar-item">
             <Link to="/filterKeg" style={{ textDecoration: 'none' }}>Filter Kegs</Link>
           </div>
-          <div className="navbar-item">
-            Sign In
-          </div>
         </div>
 
       </div>
