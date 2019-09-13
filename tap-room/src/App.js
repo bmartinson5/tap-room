@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar.js'
 import KegList from './KegList.js'
 import KegPage from './KegPage.js'
+import FilterKeg from './FilterKeg.js'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AddKeg from './AddKeg.js'
 import './css/App.css';
@@ -120,6 +121,7 @@ class App extends React.Component{
                                                   changePrice={this.changePrice}
                                                   />} />
             <Route exact path='/addKeg' render={()=><AddKeg addKeg={this.addKeg}/>} />
+            <Route exact path='/filterKeg' render={()=><FilterKeg kegList={this.state.kegList}/>} />
 
           </Switch>
         </div>

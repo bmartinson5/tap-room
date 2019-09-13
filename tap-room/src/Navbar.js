@@ -20,7 +20,7 @@ class Navbar extends Component {
             <Link to="/addKeg"style={{ textDecoration: 'none' }}>Add Keg</Link>
           </div>
           <div className="navbar-item">
-            Filter Kegs
+            <Link to="/filterKeg" style={{ textDecoration: 'none' }}>Filter Kegs</Link>
           </div>
           <div className="navbar-item">
             Sign In
