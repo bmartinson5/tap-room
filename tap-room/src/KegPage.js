@@ -22,7 +22,7 @@ export default class Keg extends Component {
   }
 
   render(){
-    const { info, kegNumber } = this.props
+    const { info, kegNumber, deleteKeg } = this.props
     return (
       <div>
       <div className="keg-container"
@@ -49,6 +49,8 @@ export default class Keg extends Component {
           <p>Change Price</p>
           <button  onClick={() => this.props.changePrice(0.5, kegNumber)}>Increase (+$0.50)</button>
           <button  onClick={() => this.props.changePrice(-0.5, kegNumber)}>Decrease (-$0.50)</button><br/><br/><br/>
+
+          <Link to="/"><button onClick={()=> deleteKeg(kegNumber)} style={{backgroundColor: "red"}}>Delete Keg</button></Link><br/>
           <Link to="/"> Return to Kegs list</Link>
         </div>
       </div>

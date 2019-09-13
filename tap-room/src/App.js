@@ -103,6 +103,15 @@ class App extends React.Component{
     })
 
   }
+
+  deleteKeg = (kegNumber) => {
+    const newKegList = this.state.kegList.slice()
+    newKegList.splice(kegNumber, 1)
+    this.setState({
+      kegList: newKegList
+    })
+  }
+
   render(){
     return (
       <div className="App">
@@ -119,9 +128,10 @@ class App extends React.Component{
                                                   info={this.state.kegList[this.state.currentKeg]}
                                                   changeVolume={this.changeVolume}
                                                   changePrice={this.changePrice}
+                                                  deleteKeg={this.deleteKeg}
                                                   />} />
             <Route exact path='/addKeg' render={()=><AddKeg addKeg={this.addKeg}/>} />
-            <Route exact path='/filterKeg' render={()=><FilterKeg kegList={this.state.kegList}/>} />
+            <Route exact path='/filterKeg' render={()=><FilterKeg handleClick={this.handleKegSelect} kegList={this.state.kegList}/>} />
 
           </Switch>
         </div>

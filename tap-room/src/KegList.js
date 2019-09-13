@@ -10,13 +10,13 @@ export default class KegList extends Component {
 
 
   render(){
-    const {kegList, handleClick} = this.props;
+    const {kegList, handleClick, deleteKeg} = this.props;
 
     return (
       <div className="keg-list" >
 
         {kegList.map((keg, index) => (
-            <Keg key={index} info={keg} kegNumber={index+1} callback={handleClick}/>
+            <Keg key={index} info={keg} kegNumber={index+1} deleteKeg={deleteKeg} callback={handleClick}/>
         ))}
       </div>
     );

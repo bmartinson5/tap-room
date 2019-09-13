@@ -9,7 +9,7 @@ export default class Keg extends Component {
   }
 
   render(){
-    const { info, kegNumber, callback, key } = this.props
+    const { info, kegNumber, callback, key, deleteKeg} = this.props
     return (
       <div className="keg-list-item"
         style={{
@@ -26,7 +26,7 @@ export default class Keg extends Component {
           Volume: {info.volume}%<br/>
           IBU: {info.ibu} <br/>
           ABV: {info.abv}% <br/>
-          Price: ${info.price}
+          Price: ${info.price}<br/>
         </div>
         </Link>
       </div>
