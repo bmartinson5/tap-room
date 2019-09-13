@@ -28,21 +28,29 @@ export default class AddKeg extends Component {
   render(){
     const { info, kegNumber } = this.props
     return (
-      <div className="add-keg-form">
-       <h1>Add A Keg</h1>
+      <div className="keg-container-form"
+        style={{
+          background: "url(" + KegPic + ")",
+          backgroundPosition: "center",
+        }}>
 
-       <input type="text" value={this.state.name} name="name" onChange={this.handleChange}placeholder="name" /><br/>
-       <br/>
-       <input type="text" value={this.state.brand} name="brand" onChange={this.handleChange} placeholder="brand"/><br/>
-       <br/>
-       <input type="number" value={this.state.ibu} name="ibu" onChange={this.handleChange} placeholder="ibu"/><br/>
-       <br/>
-       <input type="number" value={this.state.abv} name="abv" onChange={this.handleChange} placeholder="abv"/><br/>
-       <br/>
-       <input type="number" value={this.state.price} name="price" onChange={this.handleChange} placeholder="price"/><br/>
-       <br/>
-       <Link to="/"><button onClick={() => this.props.addKeg(this.state)}>Add</button></Link><br/>
-       <Link to="/">Cancel</Link>
+
+        <div className="add-keg-form">
+         <h1>Add A Keg</h1>
+
+         <input type="text" value={this.state.name} name="name" onChange={this.handleChange}placeholder="name" /><br/>
+         <br/>
+         <input type="text" value={this.state.brand} name="brand" onChange={this.handleChange} placeholder="brand"/><br/>
+         <br/>
+         <input type="number" value={this.state.ibu} name="ibu" onChange={this.handleChange} placeholder="ibu"/><br/>
+         <br/>
+         <input type="number" value={this.state.abv} name="abv" onChange={this.handleChange} placeholder="abv"/><br/>
+         <br/>
+         <input type="number" value={this.state.price} name="price" onChange={this.handleChange} placeholder="price"/><br/>
+         <br/>
+         <Link to="/"><button onClick={() => this.props.addKeg(this.state)}>Add</button></Link><br/>
+         <Link to="/">Cancel</Link>
+        </div>
       </div>
     );
   }

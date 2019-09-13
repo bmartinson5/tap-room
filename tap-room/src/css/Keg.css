@@ -31,7 +31,7 @@
   background-color: #CCB868;
 }
 
-.keg-container, .add-keg-form {
+.keg-container {
   width: 600px;
   height: 600px;
   position: absolute;
@@ -60,4 +60,27 @@
   transform: translate(-50%, -50%);
   border: 2px solid black;
   border-radius: 10px;
+}
+
+.add-keg-form {
+  text-align: center;
+  background-color: #F2F2F2;
+  position: absolute;
+  font-size: 20px;
+  padding: 20px;
+  width: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.keg-container-form {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

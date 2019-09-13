@@ -11,11 +11,13 @@ class Navbar extends Component {
     return (
       <div className="navbar">
         <div className="navbar-items">
+          <Link to="/" style={{ textDecoration: 'none' }}>
           <div className="logo">
             Tap Room
           </div>
+          </Link>
           <div className="navbar-item">
-            <Link to="/addKeg">Add Keg</Link>
+            <Link to="/addKeg"style={{ textDecoration: 'none' }}>Add Keg</Link>
           </div>
           <div className="navbar-item">
             Filter Kegs
