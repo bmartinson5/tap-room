@@ -5,20 +5,113 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AddKeg from './AddKeg.js'
 import './css/App.css';
 
-function App() {
-  return (
-    <div className="App">
-    <BrowserRouter>
-      <div>
-        <Navbar />
-        <Switch>
-          <Route exact path='/' component={KegList} />
-          <Route exact path='/addKeg' component={AddKeg} />
-        </Switch>
+class App extends React.Component{
+  constructor(props){
+    super(props)
+    this.kegList = [
+      {
+        name: "Hazy IPA",
+        brand: "Deschuttes",
+        volume: 100,
+        ibu: 55,
+        abv: 6.2,
+        price: 4.50
+      },
+      {
+        name: "Rainier",
+        brand: "Rainier",
+        volume: 100,
+        ibu: 20,
+        abv: 4.5,
+        price: 2.50
+      },
+      {
+        name: "Summer Pilz",
+        brand: "Pfriem",
+        volume: 85,
+        ibu: 27,
+        abv: 5.5,
+        price: 3.99
+      },
+      {
+        name: "Hop Stoopid",
+        brand: "Lagunitas",
+        volume: 95,
+        ibu: 76,
+        abv: 8.2,
+        price: 5.00
+      },
+      {
+        name: "Trail Beer",
+        brand: "Deschuttes",
+        volume: 100,
+        ibu: 45,
+        abv: 5.0,
+        price: 4.00
+      }
+    ]
+
+    this.state = {
+      kegList: this.kegList,
+      kegPage: false,
+      currentKeg: 0
+    }
+  }
+
+  handleClick = (kegNumber) => {
+    console.log(kegNumber, this.state.kegList[kegNumber]);
+    this.setState({
+      kegPage: true,
+      currentKeg: kegNumber
+    })
+  }
+
+  showKegs = () => {
+    this.setState({
+      kegPage: false
+    })
+  }
+
+  changePrice = (amount, kegNumber) => {
+    console.log('here', amount, kegNumber);
+
+    const newKegList = this.state.kegList
+    newKegList[kegNumber].price += amount;
+    if(newKegList[kegNumber].price < 0) newKegList[kegNumber].price = 0
+    this.setState({
+      kegList: newKegList
+    })
+  }
+
+  changeVolume = (sellNumber, kegNumber) => {
+    const newKegList = this.state.kegList
+    newKegList[kegNumber].volume -= sellNumber * 5;
+    if(newKegList[kegNumber].volume < 0) newKegList[kegNumber].volume = 0
+    this.setState({
+      kegList: newKegList
+    })
+
+  }
+  render(){
+    return (
+      <div className="App">
+      <BrowserRouter>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route exact path='/' render={()=><KegList
+                                                  kegList={this.state.kegList}
+                                                  currentKeg={this.state.currentKeg}
+                                                  kegPage={this.state.kegPage}
+                                                  handleClick={this.handleClick}
+                                                  />} />
+            <Route exact path='/addKeg' component={AddKeg} />
+          </Switch>
+        </div>
+      </BrowserRouter>
       </div>
-    </BrowserRouter>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
