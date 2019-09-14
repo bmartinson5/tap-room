@@ -2,7 +2,7 @@
   "name": "tap-room",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://bmartinson5.github.io/tap-room",
+  "homepage": "http://bmartinson5.github.io/tap-room/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",

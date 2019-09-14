@@ -115,7 +115,7 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="tap-room">
         <div>
           <Navbar />
           <Switch>
