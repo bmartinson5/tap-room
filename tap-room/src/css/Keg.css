@@ -28,7 +28,7 @@
 }
 
 .beer-info:hover {
-  background-color: #CCB868;
+  color: #CCB868;
 }
 
 .keg-container {
@@ -41,9 +41,15 @@
 }
 
 .edit-info {
+  font-size: 20px;
+  background-color: #CCB868;
+  border: 2px solid black;
+  padding: 30px;
+  border-radius: 8px;
   position: absolute;
+  margin-top: 100px;
   left: 33%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
 
 }
@@ -85,12 +91,16 @@
   transform: translate(-50%, -50%);
 }
 
-.filter-container {
-}
+
 
 .filter-info {
-  margin-left: 40%;
-  margin-top: 20px;
+  font-size: 20px;
+  background-color: #CCB868;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 35%;
+  margin-top: 50px;
   width: 30%;
 }
 
