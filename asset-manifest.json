@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/tap-room/static/css/main.b15a745e.chunk.css",
+    "main.js": "/tap-room/static/js/main.c38ff8bf.chunk.js",
+    "main.js.map": "/tap-room/static/js/main.c38ff8bf.chunk.js.map",
+    "runtime~main.js": "/tap-room/static/js/runtime~main.1e88d29c.js",
+    "runtime~main.js.map": "/tap-room/static/js/runtime~main.1e88d29c.js.map",
+    "static/js/2.96015dd3.chunk.js": "/tap-room/static/js/2.96015dd3.chunk.js",
+    "static/js/2.96015dd3.chunk.js.map": "/tap-room/static/js/2.96015dd3.chunk.js.map",
+    "index.html": "/tap-room/index.html",
+    "precache-manifest.3763396521297c72f46249e776d3317c.js": "/tap-room/precache-manifest.3763396521297c72f46249e776d3317c.js",
+    "service-worker.js": "/tap-room/service-worker.js",
+    "static/css/main.b15a745e.chunk.css.map": "/tap-room/static/css/main.b15a745e.chunk.css.map",
+    "static/media/keg.jpg": "/tap-room/static/media/keg.c30d1330.jpg"
+  }
+}
